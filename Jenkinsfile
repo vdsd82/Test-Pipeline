@@ -16,6 +16,11 @@ pipeline {
         echo 'Testing complete'
         node(label: 'node1') {
           sh 'echo " Lets play more"'
+          node(label: 'node2') {
+            echo 'Running on node 2'
+            sh 'hostname2=`hostname`'
+          }
+
         }
 
       }
