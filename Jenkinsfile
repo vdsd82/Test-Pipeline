@@ -18,7 +18,12 @@ pipeline {
           sh 'echo " Lets play more"'
           node(label: 'node2') {
             echo 'Running on node 2'
-            sh 'hostname2=`hostname`'
+            sh '''hostname2=`hostname`;echo "$hostname2"
+
+
+
+
+'''
           }
 
         }
